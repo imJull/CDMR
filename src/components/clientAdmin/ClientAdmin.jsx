@@ -1,7 +1,11 @@
 import React from 'react'
+import { Navbar } from '../nav/Navbar'
 
 export const ClientAdmin = () => {
   return (
-    <div>ClienteAdmin</div>
+    <div>
+      <Navbar />
+      ClienteAdmin
+    </div>
   )
 }

@@ -12,13 +12,16 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { useNavigate } from 'react-router-dom';
 
 const pages = ['Inicio', 'Administrar Usuarios', 'Clientes Potenciales'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Perfil', 'Cuenta', 'Dashboard', 'Cerrar Sesion'];
 
 export const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const Navigate = useNavigate()
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -28,8 +31,19 @@ export const Navbar = () => {
   };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    setAnchorElNav(null);    
   };
+
+  const redirect = (page) => {
+    console.log(page)
+    if (page === "Inicio"){
+        Navigate("/")
+    }else if(page === "Administrar Usuarios"){
+        Navigate("/admin")
+    }else if(page === "Clientes Potenciales"){
+        Navigate("/clientespot")
+    }
+  }
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -89,7 +103,7 @@ export const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">{pages}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -117,7 +131,7 @@ export const Navbar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => redirect(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
@@ -126,9 +140,9 @@ export const Navbar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Abrir Opciones">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="https://ih1.redbubble.net/image.1370448268.2354/st,small,507x507-pad,600x600,f8f8f8.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

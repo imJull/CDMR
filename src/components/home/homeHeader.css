@@ -1,0 +1,23 @@
+.home-container{
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header-container{
+    width:  80%;
+    height: 10rem;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 50px 0;
+}
+
+.avatar{
+    margin-right: 25px;
+}
+
