@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from './components/home/Home';
 import { UserAdmin } from './components/userAdmin/UserAdmin';
 import { ClientAdmin } from './components/clientAdmin/ClientAdmin';
-import { ErrorPage } from './components/ErrorPage';
+import { ErrorPage } from './components/error/ErrorPage';
 
 
 function App() {

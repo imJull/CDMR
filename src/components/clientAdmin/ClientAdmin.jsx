@@ -1,5 +1,7 @@
 import React from 'react'
 import { Navbar } from '../nav/Navbar'
+import AddIcon from '@mui/icons-material/Add';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 import "./clientAdmin.css"
 
@@ -10,6 +12,10 @@ export const ClientAdmin = () => {
       <div className="header-container">
         <div className="headerText">
           <h1>Clientes Potenciales</h1>
+          <div className="header-icons">
+            <SearchOutlinedIcon />
+            <AddIcon />
+          </div>
         </div>
       </div>
       <div className="client-main-container">
