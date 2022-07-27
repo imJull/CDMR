@@ -49,18 +49,23 @@
     border-radius: 10px;
     padding: 1rem;
 }
+
 .main-addUser{
+    position: relative;
     border: 1px solid green;
     height: 4rem;
-    padding: 2rem;
-    
+    padding: 2rem;    
 }
 
 .main-addUser-text{
+    position: absolute;
+    top: 10px;
+    border: 1px solid red;
+    height: 40px;
+    width: 90%;
     display: flex;
     justify-content: space-around;
     align-items:center;
-    
 }
 
 .main-addUser-text p{
