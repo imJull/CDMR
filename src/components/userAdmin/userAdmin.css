@@ -1,4 +1,4 @@
-.client-container{
+.user-container{
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.header-containerC{
+.header-containerU{
         height: 10rem;
         border-radius: 8px;
         display: flex;
@@ -16,7 +16,7 @@
         margin: 50px 0;
 }
 
-.headerTextC{
+.headerTextU{
     padding: 25px 10px;
     display: flex;
     justify-content: space-between; 
@@ -25,7 +25,7 @@
     width: 100%;
 }
 
-.headerTextC h1{
+.headerTextU h1{
    font-size: 45px;
    font-style: italic;
 }
@@ -41,31 +41,21 @@
     margin: 3px 3px;
 }
 
-.client-main-container{
-    border: 2px solid rgba(135, 174, 206, 0.411);
+.user-main-container{
     padding: 15px 10px;
+    border: 2px solid rgba(135, 174, 206, 0.411);
 }
 
-.client-card{
+.user-card{
+    background-color: rgba(128, 177, 209, 0.267);
+    margin: 5px 1px;
+    padding: 0 10px;
     display: flex;
-    background-color: rgba(133, 172, 199, 0.226);
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     height: 125px;
 }
 
-.card-header{
-    padding: 3px 13px;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 15px;
-
+.card-icons Button{
+    margin: 0 5px;
 }

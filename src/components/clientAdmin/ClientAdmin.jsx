@@ -7,6 +7,7 @@ import { Navbar } from '../nav/Navbar'
 import { useState } from 'react';
 
 import ClienteAdd from './ClientAdd';
+import { Card, Container, Divider, Paper, styled, Typography } from '@mui/material';
 import "./clientAdmin.css"
 
 export const ClientAdmin = () => {
@@ -21,10 +22,20 @@ export const ClientAdmin = () => {
     setOpen(false);
   };
 
+  const StyledContainer = styled(Container)({
+    backgroundColor: "rgba(128, 177, 209, 0.267)",
+    borderRadius: "5px",
+    border: "1px solid lightgray",
+    height: "100%",
+    margin: "15px 0",
+    width: "80%",
+  })
+
   return (
     <div className='client-container'>
       <Navbar />
-      <div className="header-containerC">
+      <StyledContainer>
+      <Paper elevation={5} className="header-containerC">
         <div className="headerTextC">
           <h1>Clientes Potenciales</h1>
           <div className="header-icons">
@@ -39,20 +50,22 @@ export const ClientAdmin = () => {
           </Dialog>
           </div>
         </div>
-      </div>
-      <div className="client-main-container">
-        <div className="client-card">
+      </Paper>
+      <Paper elevation={4} className="client-main-container">
+        <Card sx={{ backgroundColor:"rgba(128, 177, 209, 0.267)"}} className="client-card">
           <div className="card-header">
-            <h1>Nombre del Cliente</h1>
+            <Typography variant='h5'>Nombre del Cliente</Typography>
             <h3>Clasificación</h3>
           </div>
+          <Divider/>
           <div className="card-footer">
             <h4>Pais de Origen</h4>
             <h4>Identificacion</h4>
             <h4>correo@electronico.com</h4>
           </div>
-        </div>
-      </div>
+        </Card>
+      </Paper>
+      </StyledContainer>
     </div>
   )
 }

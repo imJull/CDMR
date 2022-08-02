@@ -5,17 +5,20 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { FormControl } from '@mui/material';
 
 export default function ClienteAdd( {handleClose} ) {
 
   return (
     <div>
-      <DialogTitle>Nuevo Cliente Potencial</DialogTitle>
+      <DialogTitle>Nuevo</DialogTitle>
+        <FormControl>
               <DialogContent>
                 <DialogContentText>
                   To subscribe to this website, please enter your email address here. We
                   will send updates occasionally.
                 </DialogContentText>
+               
                 <TextField
                   autoFocus
                   margin="dense"
@@ -30,6 +33,7 @@ export default function ClienteAdd( {handleClose} ) {
                 <Button onClick={handleClose}>Cancel</Button>
                 <Button onClick={handleClose}>Subscribe</Button>
               </DialogActions>
+          </FormControl>
     </div>
   );
 }

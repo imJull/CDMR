@@ -1,18 +1,33 @@
-export const data = [
-    users = [
+export const users = [
         {
-            client_id: 1,
+            user_id: 1,
             username: "Jay",
             user_roll: "admin",
             full_name: "Lil Jay",
+            country: "Costa Rica",
+            age: 600,
             state: true,
             phone: "85697521",
             email:"cloutlord@clx.es",
             password: "393sffj",
-            img: "nadaa"
+            photo: "https://swall.teahub.io/photos/small/58-586619_fendi-monster-eyes-logo.png"
+        },
+        {
+            user_id: 145231,
+            username: "Jay",
+            user_roll: "editor",
+            full_name: "Lamont Christian",
+            country: "Belize",
+            age: 32,
+            state: false,
+            phone: "85697521",
+            email:"lamont@la.com",
+            password: "32las",
+            photo: "https://swall.teahub.io/photos/small/58-586619_fendi-monster-eyes-logo.png"
         }
-    ],
-    clients = [
+    ]
+
+export const clients = [
         {
             client_id: 1,
             name:"Larry",
@@ -30,4 +45,4 @@ export const data = [
         },
 
     ]
-]
+
