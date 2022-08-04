@@ -5,19 +5,28 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { FormControl } from '@mui/material';
+import { Autocomplete, FormControl, MenuItem } from '@mui/material';
 
 export const AddUser = ( {handleClose} ) => {
+
+
   return (
     <div>
       <DialogTitle>Nuevo Usuario</DialogTitle>
-        <FormControl>
+        <form>
               <DialogContent>
                 <DialogContentText>
                   To subscribe to this website, please enter your email address here. We
                   will send updates occasionally.
                 </DialogContentText>
-               
+                <TextField variant='outlined' autoFocus label="Nombre" />
+                <TextField variant='outlined' autoFocus label="1er Apellido" />
+                <TextField variant='outlined' autoFocus label="2do Apellido" />
+                <TextField variant='outlined' label="Tipo de identificación" value="" select fullWidth>
+                  <MenuItem value="CEDULA IDENTIDAD">Cédula de Identidad</MenuItem>
+                  <MenuItem value="CEDULA JURIDICA">Cédula Jurídica</MenuItem>
+                  <MenuItem value="DIMEX">DIMEX</MenuItem>
+                </TextField>
                 <TextField
                   autoFocus
                   margin="dense"
@@ -32,7 +41,7 @@ export const AddUser = ( {handleClose} ) => {
                 <Button onClick={handleClose}>Cancel</Button>
                 <Button color="primary" onClick={handleClose}>Añadir</Button>
               </DialogActions>
-          </FormControl>
+          </form>
     </div>
   )
 }
