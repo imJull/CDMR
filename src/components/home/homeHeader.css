@@ -1,0 +1,73 @@
+.home-container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container{
+    width:  80%;
+    height: 10rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 50px 0;
+}
+
+.avatar{
+    margin-right: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    border-radius: 50%;
+}
+
+.headerText{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerText h1 {
+    color: rgba(0, 0, 0, 0.801);
+    margin-bottom: 0;
+    font-size: 45px
+}
+
+.headerText p{
+    color: gray;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.main-container{
+    width: 80%;
+    border: 1px solid rgba(0, 174, 255, 0.473);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.main-addUser{
+    position: relative;
+    border: 2px solid rgba(0, 55, 128, 0.205);
+    margin-bottom: 10px;
+    height: 4rem;
+    padding: 2rem;    
+}
+
+.main-addUser-text{
+    position: absolute;
+    top: 10px;
+    height: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.main-addUser-text p{
+    color: gray;
+    font-size: 18px;
+    font-style: italic;
+}

@@ -1,0 +1,61 @@
+.user-container{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-containerU{
+        height: 10rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+        margin: 50px 0;
+}
+
+.headerTextU{
+    padding: 25px 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.headerTextU h1{
+   font-size: 45px;
+   font-style: italic;
+}
+
+.header-icons{
+    height: 60px;
+    padding: 5px 1px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-icons Button {
+    margin: 3px 3px;
+}
+
+.user-main-container{
+    padding: 15px 10px;
+    border: 2px solid rgba(135, 174, 206, 0.411);
+}
+
+.user-card{
+    background-color: rgba(128, 177, 209, 0.267);
+    margin: 5px 1px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 125px;
+}
+
+.card-icons Button{
+    margin: 0 5px;
+}
