@@ -69,13 +69,13 @@
     align-items: center;
     padding: 15px 15px;
 }
-.card-footer p:nth-child(1){
+.card-footer span:nth-child(1){
     flex: 1;
 }
-.card-footer p:nth-child(2){
+.card-footer span:nth-child(2){
     flex: 3;
     text-align: center;
 }
-.card-footer p:nth-child(3){
+.card-footer span:nth-child(3){
     flex: 1;
 }

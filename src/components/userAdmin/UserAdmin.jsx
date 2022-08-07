@@ -20,8 +20,8 @@ export const UserAdmin = () => {
     
   },[users])
   
-  const deleteUser = (id) => {
-    setUsers(users.filter((user) => user.user_id !== id))
+  const deleteUser = async (id) => {
+    await setUsers(users.filter((user) => user.user_id !== id))
     console.log(id + " Eliminado")
   }
 

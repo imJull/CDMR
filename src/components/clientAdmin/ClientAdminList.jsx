@@ -10,9 +10,9 @@ export const ClientAdminList = ({client}) => {
           </div>
           <Divider/>
           <div className="card-footer">
-            <p> <h3>País de Origen</h3> {client.country}</p>
-            <p> <h3>N.Identificacion</h3>{client.doc_number}</p>
-            <p> <h3>Correo</h3>{client.email}</p>
+            <span> <h3>País de Origen</h3> {client.country}</span>
+            <span> <h3>N.Identificacion</h3>{client.doc_number}</span>
+            <span> <h3>Correo</h3> {client.email}</span>
           </div>
         </Card>
   )
