@@ -14,7 +14,7 @@ export const usersData = [
         },
         {
             user_id: 145231,
-            username: "Jay",
+            username: "Lamont",
             user_roll: "editor",
             full_name: "Lamont Christian",
             country: "Belize",
@@ -39,6 +39,23 @@ export const clientsData = [
             birth_date: "5-7-2000",
             phone: "987741155",
             church: "Methodist",
+            email:"itsrick@boxa.net",
+            college: "Unknow",
+            classification: "XL",
+            
+        },
+        {
+            client_id: 3,
+            username:"AbraO",
+            lastname: "Cadabra",
+            firstname: "Abra",
+            doc_type: "Dimex",
+            doc_number: "58425554",
+            country: "UK",
+            birth_date: "5-7-1999",
+            phone: "987741155",
+            church: "Unknow",
+            email:"flicky@ux.uk",
             college: "Unknow",
             classification: "XL",
             

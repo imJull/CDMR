@@ -7,12 +7,15 @@ import { Navbar } from '../nav/Navbar'
 import { useState } from 'react';
 
 import ClienteAdd from './ClientAdd';
-import { Card, Container, Divider, Paper, styled, Typography } from '@mui/material';
+import { Container, Paper, styled } from '@mui/material';
 import "./clientAdmin.css"
+import { clientsData } from '../../data/Data';
+import { ClientAdminList } from './ClientAdminList';
 
 export const ClientAdmin = () => {
 
   const [open, setOpen] = useState(false);
+  const [clients, setClient] = useState(clientsData);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -52,18 +55,9 @@ export const ClientAdmin = () => {
         </div>
       </Paper>
       <Paper elevation={4} className="client-main-container">
-        <Card sx={{ backgroundColor:"rgba(128, 177, 209, 0.267)"}} className="client-card">
-          <div className="card-header">
-            <Typography variant='h5'>Nombre del Cliente</Typography>
-            <h3>Clasificación</h3>
-          </div>
-          <Divider/>
-          <div className="card-footer">
-            <h4>Pais de Origen</h4>
-            <h4>Identificacion</h4>
-            <h4>correo@electronico.com</h4>
-          </div>
-        </Card>
+        {
+          clients.map(client => <ClientAdminList key={client.client_id} client={client} />)
+        }
       </Paper>
       </StyledContainer>
     </div>

@@ -59,3 +59,19 @@
 .card-icons Button{
     margin: 0 5px;
 }
+
+.card-name{
+    flex:2;
+}
+
+.card-roll{
+    flex:1;
+}
+
+.card-status{
+    flex:1;
+}
+
+.card-icons{
+    flex:1;
+}

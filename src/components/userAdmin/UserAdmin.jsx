@@ -1,17 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
 import { Navbar } from "../nav/Navbar";
 import { AddUser } from "./AddUser";
+import { usersData, clientsData } from "../../data/Data";
+
+
 import "./userAdmin.css"
-import { Card, Container, Divider, Paper, Typography } from "@mui/material";
+import { Container, Paper, Typography } from "@mui/material";
+import { UserAdminList } from "./UserAdminList";
 
 export const UserAdmin = () => {
   const [open, setOpen] = useState(false);
+  const [users, setUsers] = useState(usersData);
+
+  useEffect(() =>{
+    
+  },[users])
+  
+  const deleteUser = (id) => {
+    setUsers(users.filter((user) => user.user_id !== id))
+    console.log(id + " Eliminado")
+  }
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -48,30 +60,7 @@ export const UserAdmin = () => {
             </div>
           </div>
         </Paper>
-        <Paper elevation={3} className="user-main-container">
-          <Card sx={{ backgroundColor: "rgba(128, 177, 209, 0.267)"}} className="user-card">
-            <div className="card-name">
-              <Typography mb={1} variant="h5" component="p">Nombre Completo</Typography>
-              <Divider/>
-              <Typography mt={1} variant="h7" component="p">Nombre de Usuario</Typography>
-            </div>
-            <div className="card-roll">
-              <h3>Rol de Usuario</h3>
-              <h4>correo@electronico.com</h4>
-            </div>
-            <div className="card-status">
-              <h3>Activo</h3>
-            </div>
-            <div className="card-icons">
-              <Button variant="outlined">
-                <EditIcon/>
-              </Button>
-              <Button variant="outlined">
-                <DeleteIcon />
-              </Button>
-            </div>
-          </Card>
-        </Paper>
+          <UserAdminList users={users} deleteUser={deleteUser} />
         </Container>
       </div>
     </div>

@@ -17,13 +17,14 @@ const foto =
 
 export const HomeHeader = () => {
   const [users, setUsers] = useState(usersData);
-  const [clients, setClient] = useState(clientsData);
 
   const Navigate = useNavigate();
 
   const addUser = () => {
-    console.log("Add user");
+    console.log("Add user")
+    Navigate("/admin");
   };
+
 
     return (
       <Box  className="home-container">
@@ -43,7 +44,7 @@ export const HomeHeader = () => {
         <Paper elevation={3} className="main-container">
           <Card className="main-addUser">
             <div className="main-addUser-text">
-              <p>{users.length} Usuario en la base de datos</p>
+              <p>{users.length} Usuarios en la base de datos</p>
               <Button variant="contained">
                 <AddIcon onClick={addUser} />
               </Button>

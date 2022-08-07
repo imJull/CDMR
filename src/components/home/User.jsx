@@ -5,32 +5,32 @@ import React from "react";
 export const User = ({ users }) => {
   return (
     <>
-      {users.map((userx) => {
+      {users.map((user) => {
         return (
           <TableRow
-            key={userx.user_id}
+            key={user.user_id}
             sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
           >
             <TableCell component="th" scope="row">
-              {userx.full_name}
+              {user.full_name}
             </TableCell>
-            <TableCell align="left">{userx.user_id}</TableCell>
-            <TableCell align="left">{userx.country}</TableCell>
-            <TableCell align="left">{userx.age}</TableCell>
+            <TableCell align="left">{user.user_id}</TableCell>
+            <TableCell align="left">{user.country}</TableCell>
+            <TableCell align="left">{user.age}</TableCell>
             <TableCell align="left">
-              {userx.state ? (
+              {user.state ? (
                 <div className="cl-state">
                   <FiberManualRecordIcon
-                    sx={{ fontSize: "9px", color: "green" }}
+                    sx={{ fontSize: "9px", color: "green", marginRight:"3px" }}
                   />
                   <span>Activo</span>
                 </div>
               ) : (
                 <div className="cl-state">
                   <FiberManualRecordIcon
-                    sx={{ fontSize: "9px", color: "red" }}
+                    sx={{ fontSize: "9px", color: "red", marginRight:"3px" }}
                   />
-                  <span>Deshabilitado</span>{" "}
+                  <span>Deshabilitado</span>
                 </div>
               )}
             </TableCell>
