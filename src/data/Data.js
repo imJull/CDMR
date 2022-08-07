@@ -1,4 +1,4 @@
-export const users = [
+export const usersData = [
         {
             user_id: 1,
             username: "Jay",
@@ -27,7 +27,7 @@ export const users = [
         }
     ]
 
-export const clients = [
+export const clientsData = [
         {
             client_id: 1,
             name:"Larry",
