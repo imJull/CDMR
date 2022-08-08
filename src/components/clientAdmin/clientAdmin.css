@@ -44,6 +44,9 @@
 .client-main-container{
     border: 2px solid rgba(135, 174, 206, 0.411);
     padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .client-card{

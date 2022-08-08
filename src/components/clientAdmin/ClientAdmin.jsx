@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -16,6 +16,10 @@ export const ClientAdmin = () => {
 
   const [open, setOpen] = useState(false);
   const [clients, setClient] = useState(clientsData);
+
+  useEffect(() => {
+
+  },[clients])
 
   const handleClickOpen = () => {
     setOpen(true);

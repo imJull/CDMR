@@ -38,17 +38,18 @@ export const clientsData = [
             country: "Belize",
             birth_date: "5-7-2000",
             phone: "987741155",
-            church: "Methodist",
+            church: "Methodista",
             email:"itsrick@boxa.net",
-            college: "Unknow",
+            college: "AACollege",
             classification: "XL",
+            photo: "https://th.bing.com/th/id/OIP.r6qg8Tk6nfSVFpvB8oMVwwHaEo?pid=ImgDet&rs=1"
             
         },
         {
-            client_id: 3,
-            username:"AbraO",
-            lastname: "Cadabra",
-            firstname: "Abra",
+            client_id: 2,
+            username:"Rashi",
+            lastname: "Rashford",
+            firstname: "Marcus",
             doc_type: "Dimex",
             doc_number: "58425554",
             country: "UK",
@@ -56,9 +57,42 @@ export const clientsData = [
             phone: "987741155",
             church: "Unknow",
             email:"flicky@ux.uk",
-            college: "Unknow",
+            college: "Manchester IL",
             classification: "XL",
+            photo: "https://www.minutoneuquen.com/u/fotografias/fotosnoticias/2020/6/12/286377.jpg"
             
+        },
+        {
+            client_id: 3,
+            username:"JoelTX",
+            lastname: "Garcia",
+            firstname: "Joel",
+            doc_type: "Cedula",
+            doc_number: "118754258",
+            country: "Costa Rica",
+            birth_date: "5-7-2001",
+            phone: "74055993",
+            church: "Adventista",
+            email:"joel@trx.com",
+            college: "CEA",
+            classification: "C",
+            photo: ""
+        },
+        {
+            client_id: 4,
+            username:"Len",
+            lastname: "Lenon",
+            firstname: "Aaron",
+            doc_type: "Cedula",
+            doc_number: "7157785",
+            country: "Costa Rica",
+            birth_date: "5-7-2003",
+            phone: "897425471",
+            church: "Adventista",
+            email:"aarron@lenn.com",
+            college: "CEAL",
+            classification: "A",
+            photo: ""
         },
 
     ]
