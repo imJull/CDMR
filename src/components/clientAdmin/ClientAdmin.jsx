@@ -11,6 +11,7 @@ import { Container, Paper, styled } from '@mui/material';
 import "./clientAdmin.css"
 import { clientsData } from '../../data/Data';
 import { ClientAdminList } from './ClientAdminList';
+import { maxWidth } from '@mui/system';
 
 export const ClientAdmin = () => {
 
@@ -29,14 +30,18 @@ export const ClientAdmin = () => {
     setOpen(false);
   };
 
+
+
   const StyledContainer = styled(Container)({
     backgroundColor: "rgba(128, 177, 209, 0.267)",
     borderRadius: "5px",
     border: "1px solid lightgray",
-    height: "100%",
+    height: "5000px",
     margin: "15px 0",
     width: "80%",
+    overflow: "auto"
   })
+
 
   return (
     <div className='client-container'>
@@ -52,9 +57,9 @@ export const ClientAdmin = () => {
             <Button onClick={handleClickOpen} variant='text'>
               <AddIcon sx={{fontSize: "45px"}} onClick={() => console.log("HolaAdd")}/>
             </Button>
-            <Dialog open={open} onClose={handleClose}>
-              <ClienteAdd hancleClose={handleClose} />
-          </Dialog>
+            <Dialog fullWidth maxWidth={'lg'} open={open} onClose={handleClose}>
+              <ClienteAdd handleClose={handleClose}/>
+            </Dialog>
           </div>
         </div>
       </Paper>

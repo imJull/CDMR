@@ -33,6 +33,11 @@ export const UserAdmin = () => {
     setOpen(false);
   };
 
+  const addUser = (id) => {
+    console.log("Usuario " + id + " añadido")
+    return id
+  }
+
   return (
     <div>
       <Navbar />
@@ -53,9 +58,9 @@ export const UserAdmin = () => {
                   sx={{ fontSize: "45px" }}
                   onClick={() => console.log("HolaAddUser")}
                 />
-              </Button>
-              <Dialog open={open} onClose={handleClose}>
-                <AddUser hancleClose={handleClose} />
+              </Button> 
+              <Dialog fullWidth maxWidth={"lg"} open={open} onClose={handleClose}>
+                <AddUser handleClose={handleClose} addUser={addUser}/>
               </Dialog>
             </div>
           </div>

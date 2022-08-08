@@ -1,8 +1,7 @@
 import React from "react";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Button, Card, Divider, Paper, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Button, Divider, Typography } from "@mui/material";
 
 export const UserA = ({ user, deleteUser }) => {
   return (

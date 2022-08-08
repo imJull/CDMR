@@ -37,12 +37,22 @@ export const Navbar = () => {
   const redirect = (page) => {
     console.log(page)
     if (page === "Inicio"){
+      setTimeout(() => {
         Navigate("/")
+      }, 1000)
+        
     }else if(page === "Administrar Usuarios"){
         Navigate("/admin")
     }else if(page === "Clientes Potenciales"){
         Navigate("/clientespot")
     }
+  }
+
+  const settingRedirect = (setting) => {
+    console.log(setting)
+    if (setting === 'Cerrar Sesion'){setTimeout(() => {
+      Navigate("/landing")
+    }, 3000)}
   }
 
   const handleCloseUserMenu = () => {
@@ -163,7 +173,7 @@ export const Navbar = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography onClick={(() => settingRedirect(setting))} textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>
